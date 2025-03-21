@@ -1,43 +1,3 @@
-Certainly! Below is the GraphQL schema with the mutations and the resolver code including placeholder sample data, wrapped in the specified prefixes and suffixes.
-
-```graphql
-# schema-codegen-start
-const typeDefs = `
-  type PremiumAdjustment {
-    id: ID!
-    Comment: String!
-    Total_Borrower_Fees_M: Float
-    CU_Retail_Rate: Float
-    Protected_Loan_Amount_M: Float
-    Pay_Rate: Float
-    Premium_Due: Float
-    Total_Amount: Float
-  }
-
-  input PremiumAdjustmentInput {
-    id: ID!
-    Comment: String!
-    Total_Borrower_Fees_M: Float
-    CU_Retail_Rate: Float
-    Protected_Loan_Amount_M: Float
-    Pay_Rate: Float
-    Premium_Due: Float
-    Total_Amount: Float
-  }
-
-  type Query {
-    getPremiumAdjustment(id: ID!): PremiumAdjustment
-  }
-
-  type Mutation {
-    editPremiumAdjustment(input: PremiumAdjustmentInput!): PremiumAdjustment
-  }
-`;
-# schema-codegen-end
-```
-
-```javascript
-// resolver-codegen-start
 const resolvers = {
   Query: {
     getPremiumAdjustment: (_, { id }) => {
@@ -79,5 +39,6 @@ const resolvers = {
     },
   },
 };
-// resolver-codegen-end
-```
+//
+
+export default resolvers;
